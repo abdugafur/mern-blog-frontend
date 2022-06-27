@@ -9,6 +9,8 @@ const instance = axios.create({
   baseURL: URL,
 });
 
+console.log(URL);
+
 instance.interceptors.request.use((config) => {
   config.headers.Authorization = window.localStorage.getItem("token");
   return config;

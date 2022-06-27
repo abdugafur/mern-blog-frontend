@@ -23,6 +23,8 @@ export const Home = () => {
     dispatch(fetchTags());
   }, []);
 
+  console.log(URL, "url");
+
   return (
     <>
       <Tabs
@@ -49,6 +51,7 @@ export const Home = () => {
                 commentsCount={3}
                 tags={obj.tags}
                 isEditable={userData?._id === obj.user._id}
+                key={index}
               />
             )
           )}
