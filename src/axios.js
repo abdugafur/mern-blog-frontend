@@ -1,12 +1,12 @@
 import axios from "axios";
 
-const url =
+const URL =
   document.domain === "localhost"
     ? "http://localhost:5555"
     : process.env.REACT_APP_API_URL;
 
 const instance = axios.create({
-  baseURL: url,
+  baseURL: URL,
 });
 
 instance.interceptors.request.use((config) => {
@@ -15,3 +15,5 @@ instance.interceptors.request.use((config) => {
 });
 
 export default instance;
+
+export { URL };

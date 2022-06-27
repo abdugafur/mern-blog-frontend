@@ -8,7 +8,7 @@ import SimpleMDE from "react-simplemde-editor";
 
 import "easymde/dist/easymde.min.css";
 import { selectIsAuth } from "../../redux/slices/auth";
-import axios from "../../axios";
+import axios, { URL } from "../../axios";
 import styles from "./AddPost.module.scss";
 
 export const AddPost = () => {
@@ -132,7 +132,7 @@ export const AddPost = () => {
           </Button>
           <img
             className={styles.image}
-            src={`${process.env.REACT_APP_API_URL}${imageUrl}`}
+            src={`${URL}${imageUrl}`}
             alt="Uploaded"
           />
         </>
